@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Cat Facts Copy &amp; Paste</string>
+    <string name="notification_text">Cat Facts Copy &amp; Paste:</string>
+    <string name="current_fact_header">Cat Fact #%s</string>
+    <string name="cat_facts_fast_paste">Cat Facts Copy &amp; Paste:</string>
+    <string name="next_fact">NEXT FACT</string>
+    <string name="enable">ENABLE</string>
+    <string name="how_to_use">HOW TO USE</string>
+    <string name="disable">DISABLE</string>
+    <string name="copy_paste_disabled">Copy paste mode disabled.</string>
+    <string name="copy_paste_enabled">Copy paste mode enabled.</string>
+    <string name="press_here">Example: \nPress here for a second, then release.</string>
+    <string name="step_one">#1: Find somewhere to enter text, and \"Paste\".</string>
+    <string name="step_two">#2: Send the fact. Here you can clear the text.</string>
+    <string name="step_three">#3: Repeat and each time a new fact appears!</string>
+    <string name="cat_facts">Cat Facts</string>
+    <string name="send">Clear Text</string>
+    <string name="go_back">go back</string>
+    <string name="share_using">Share Using:</string>
+    <string name="step_zero">Before learning how to use, click the \"%s\" button.</string>
+    <string name="disabled">DISABLED</string>
+    <string name="enabled">ENABLED</string>
+</resources>
