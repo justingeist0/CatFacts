@@ -15,16 +15,12 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.InterstitialAd
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: ViewModel
     private lateinit var mNotificationReceiver: BroadcastReceiver
     private lateinit var mDeleteNotificationReceiver: BroadcastReceiver
-    private lateinit var interstitialAd: InterstitialAd
     private var actions = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,20 +68,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initMonetization() {
-        if(true)return
-
+        //TODO
     }
 
     private fun showAd() : Boolean {
         actions++
         if(actions >= 10) {
             actions = 0
-            interstitialAd.show()
+            //TODO interstitialAd.show()
             return true
         }
         return false
     }
 
+    /**
+     * Used to share text of fact if fact is pressed.
+     */
     private fun createShareIntent() {
         val shareIntent = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
@@ -306,11 +304,21 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
     }
 
+    /**
+     * Get index of last fact shown.
+     *
+     * Call on onResume
+     */
     private fun getIdxOfLastSeenFact(): Int {
         val prefs = getSharedPreferences(KEY_PREFERENCES, Context.MODE_PRIVATE)
         return prefs.getInt(KEY_PREVIOUS_FACT, 0)
     }
 
+    /**
+     * Set index of last fact shown.
+     *
+     * Store on onPause.
+     */
     private fun setLastFactIdx(idx: Int) {
         val prefs = getSharedPreferences(KEY_PREFERENCES, Context.MODE_PRIVATE)
         val editor = prefs.edit()
@@ -318,11 +326,21 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
     }
 
+    /**
+     * Get amount of app interactions user has had.
+     *
+     * Used to know when to show interstitial ads.
+     */
     private fun getActionCount(): Int {
         val prefs = getSharedPreferences(KEY_PREFERENCES, Context.MODE_PRIVATE)
         return prefs.getInt(KEY_ACTION_COUNTER, 0)
     }
 
+    /**
+     * Set amount of app interactions user has had.
+     *
+     * Store on onPause.
+     */
     private fun setActionCount(idx: Int) {
         val prefs = getSharedPreferences(KEY_PREFERENCES, Context.MODE_PRIVATE)
         val editor = prefs.edit()

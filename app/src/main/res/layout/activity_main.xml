@@ -66,6 +66,8 @@
         android:text="@string/next_fact"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@id/copy_paste_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         style="@style/button"/>
 
     <LinearLayout
@@ -75,7 +77,7 @@
         android:orientation="vertical"
         android:gravity="center"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@id/ad_view">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
             android:id="@+id/main_header_tv"

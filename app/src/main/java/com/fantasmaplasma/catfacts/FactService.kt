@@ -106,10 +106,8 @@ class FactService : Service() {
 
     companion object {
         const val TAG = "COPY_SERVICE"
-
         const val ACTION_CANCEL = "${BuildConfig.APPLICATION_ID}.ACTION_CANCEL"
         const val ACTION_RESUME = "${BuildConfig.APPLICATION_ID}.ACTION_RESUME"
-
         private lateinit var clipboard: ClipboardManager
         private val repository = Repository()
         private var copyPasteJob: Job? = null

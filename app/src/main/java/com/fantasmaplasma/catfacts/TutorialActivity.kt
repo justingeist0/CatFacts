@@ -15,9 +15,9 @@ class TutorialActivity : AppCompatActivity() {
     }
 
     private fun setUpViews() {
-        var charIncrease = 0
         editTextTutorial
             .addTextChangedListener(object : TextWatcher {
+                var charIncrease = 0
                 override fun afterTextChanged(s: Editable?) {}
                 override fun beforeTextChanged(
                     s: CharSequence?,
