@@ -9,4 +9,4 @@ Features:
 - Animation
 - MVVM
 
-[Google Play](https://play.google.com/store/apps/details?id=com.fantasmaplasma.catfacts)
+[Download on Google Play](https://play.google.com/store/apps/details?id=com.fantasmaplasma.catfacts)
